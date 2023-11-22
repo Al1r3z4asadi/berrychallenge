@@ -1,3 +1,4 @@
+using Api.common.Extensions;
 using berry.facade;
 
 namespace berry
@@ -12,6 +13,7 @@ namespace berry
 
             builder.Services.AddControllers();
             builder.Services.AddScoped<CustomerFacade>();
+            builder.Services.ConfigureApiOptions();
 
             var app = builder.Build();
 
