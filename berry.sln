@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34018.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api", "berry\Api.csproj", "{8785DB1A-D1BB-47F1-8615-8D7253D5E98D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "core", "core", "{03EA39BB-0C4C-413C-8830-6B87838CC43A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "berry.core", "berry.core\berry.core.csproj", "{912A74BA-F546-457C-A268-0A5B827E7F97}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataAccess", "DataAccess", "{1E593D28-3B01-4238-9FC9-BD14855C959C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\DataAccess.csproj", "{3C1A0021-F1CB-4946-89DC-4CE5E10F6380}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "facade", "facade", "{BF2120A5-6F4D-460A-83E1-5089146EC581}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "berry.facade", "berry.facade\berry.facade.csproj", "{2C62E944-CC42-4D5E-87B0-CAC328C99EFF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8785DB1A-D1BB-47F1-8615-8D7253D5E98D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8785DB1A-D1BB-47F1-8615-8D7253D5E98D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8785DB1A-D1BB-47F1-8615-8D7253D5E98D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8785DB1A-D1BB-47F1-8615-8D7253D5E98D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{912A74BA-F546-457C-A268-0A5B827E7F97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{912A74BA-F546-457C-A268-0A5B827E7F97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{912A74BA-F546-457C-A268-0A5B827E7F97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{912A74BA-F546-457C-A268-0A5B827E7F97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C1A0021-F1CB-4946-89DC-4CE5E10F6380}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C1A0021-F1CB-4946-89DC-4CE5E10F6380}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C1A0021-F1CB-4946-89DC-4CE5E10F6380}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C1A0021-F1CB-4946-89DC-4CE5E10F6380}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C62E944-CC42-4D5E-87B0-CAC328C99EFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C62E944-CC42-4D5E-87B0-CAC328C99EFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C62E944-CC42-4D5E-87B0-CAC328C99EFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C62E944-CC42-4D5E-87B0-CAC328C99EFF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{912A74BA-F546-457C-A268-0A5B827E7F97} = {03EA39BB-0C4C-413C-8830-6B87838CC43A}
+		{3C1A0021-F1CB-4946-89DC-4CE5E10F6380} = {1E593D28-3B01-4238-9FC9-BD14855C959C}
+		{2C62E944-CC42-4D5E-87B0-CAC328C99EFF} = {BF2120A5-6F4D-460A-83E1-5089146EC581}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {518DA39C-2857-4C4E-A6CD-73D4E1DA80DE}
+	EndGlobalSection
+EndGlobal
