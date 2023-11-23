@@ -1,8 +1,8 @@
 ﻿
 using Api.common.Extensions;
 using berry.core.ApplicationService;
-using berry.facade;
 using Microsoft.AspNetCore.Mvc;
+using Serilog;
 
 namespace Api.Controllers
 {
@@ -20,6 +20,7 @@ namespace Api.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAllCustomers()
         {
+            Log.Information("get all customers");
             var customers = await _customerFacade.getAllCustomers();
             return Ok(customers.WrapResponse(Request.Path));
         }

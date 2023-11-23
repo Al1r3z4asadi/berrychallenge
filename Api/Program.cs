@@ -4,6 +4,7 @@ using berry.core.ApplicationService;
 using berry.core.DomainService.IOC;
 using berry.facade;
 using DataAccess.IOC;
+using Serilog;
 
 namespace berry
 {
@@ -20,6 +21,11 @@ namespace berry
             builder.Services.AddScoped<ICustomerService,CustomerFacade>();
             builder.Services.ConfigureApiOptions();
             builder.Services.AddPersistence();
+
+
+            Log.Logger = new LoggerConfiguration()
+                    .ReadFrom.Configuration(builder.Configuration)
+                 .CreateLogger();
 
             var app = builder.Build();
 
