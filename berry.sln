@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api", "Api\Api.csproj", "{8
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "core", "core", "{03EA39BB-0C4C-413C-8830-6B87838CC43A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "berry.core", "berry.core\berry.core.csproj", "{912A74BA-F546-457C-A268-0A5B827E7F97}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Berry.Core", "berry.core\Berry.Core.csproj", "{912A74BA-F546-457C-A268-0A5B827E7F97}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataAccess", "DataAccess", "{1E593D28-3B01-4238-9FC9-BD14855C959C}"
 EndProject
@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\Da
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "facade", "facade", "{BF2120A5-6F4D-460A-83E1-5089146EC581}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "berry.facade", "berry.facade\berry.facade.csproj", "{2C62E944-CC42-4D5E-87B0-CAC328C99EFF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Berry.Facade", "berry.facade\Berry.Facade.csproj", "{2C62E944-CC42-4D5E-87B0-CAC328C99EFF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -11,8 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\berry.core\berry.core.csproj" />
-    <ProjectReference Include="..\berry.facade\berry.facade.csproj" />
+    <ProjectReference Include="..\berry.core\Berry.Core.csproj" />
+    <ProjectReference Include="..\berry.facade\Berry.Facade.csproj" />
     <ProjectReference Include="..\DataAccess\DataAccess.csproj" />
   </ItemGroup>
 

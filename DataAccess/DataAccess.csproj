@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\berry.core\berry.core.csproj" />
+    <ProjectReference Include="..\berry.core\Berry.Core.csproj" />
   </ItemGroup>
 
 </Project>

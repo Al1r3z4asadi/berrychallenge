@@ -1,4 +1,5 @@
 using Api.common.Extensions;
+using Api.Middlewares;
 using berry.core.ApplicationService;
 using berry.core.DomainService.IOC;
 using berry.facade;
@@ -26,6 +27,7 @@ namespace berry
             {
 
             }
+            app.UseMiddleware<ExceptionHandlerMiddleware>();
 
 
             // Configure the HTTP request pipeline.
