@@ -1,4 +1,6 @@
 ﻿
+using Api.common.Extensions;
+using berry.core.ApplicationService;
 using berry.facade;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,16 +10,18 @@ namespace Api.Controllers
     [ApiController]
     public class CustomerController : ControllerBase
     {
-        private readonly CustomerFacade _customerFacade;
+        private readonly ICustomerService _customerFacade;
 
-        public CustomerController(CustomerFacade customerFacade)
+        public CustomerController(ICustomerService customerFacade)
         {
             _customerFacade = customerFacade; 
         }
 
-        public void GetAllCustomers()
+        [HttpGet]
+        public async Task<IActionResult> GetAllCustomers()
         {
-            
+            var customers = await _customerFacade.getAllCustomers();
+            return Ok(customers.WrapResponse(Request.Path));
         }
     }
 }

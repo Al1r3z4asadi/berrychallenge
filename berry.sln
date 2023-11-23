@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\Da
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "facade", "facade", "{BF2120A5-6F4D-460A-83E1-5089146EC581}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "berry.facade", "berry.facade\berry.facade.csproj", "{2C62E944-CC42-4D5E-87B0-CAC328C99EFF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "berry.facade", "berry.facade\berry.facade.csproj", "{2C62E944-CC42-4D5E-87B0-CAC328C99EFF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

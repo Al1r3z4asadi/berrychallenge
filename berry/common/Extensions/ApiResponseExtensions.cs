@@ -1,4 +1,6 @@
-﻿namespace Api.common
+﻿using System.Net;
+
+namespace Api.common.Extensions
 {
     public static class ApiResponseExtensions
     {
