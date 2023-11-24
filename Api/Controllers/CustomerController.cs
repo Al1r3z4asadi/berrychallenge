@@ -34,5 +34,14 @@ namespace Api.Controllers
             await _customerFacade.AddCutomer(customer);
             return Created(Request.Path, customer.WrapResponse(Request.Path));
         }
+
+        [HttpPut]
+        public async Task<IActionResult> RenamCustomer([FromBody] RenameCustomerRequest request)
+        {
+            var customer = request.ToDto();
+            await _customerFacade.EditCustomerName(customer);
+            return Created(Request.Path, customer.WrapResponse(Request.Path));
+        }
+
     }
 }

@@ -5,6 +5,7 @@ namespace berry.core.ApplicationService
     public interface ICustomerService
     {
         Task AddCutomer(CustomerDto customer);
+        Task EditCustomerName(CustomerDto customer);
         Task<IEnumerable<CustomerDto>> getAllCustomers();
     }
 }

@@ -17,6 +17,11 @@ namespace berry.core.DomainService
             await _customerRepository.InsertAsync(customer);
         }
 
+        public async Task EditCustomerName(Customer customer)
+        {
+            await _customerRepository.UpdateAsync(customer.Id, customer);
+        }
+
         public async Task<IEnumerable<CustomerDto>> getAllCustomers()
         {
             var customers = await _customerRepository.GetAllAsync();

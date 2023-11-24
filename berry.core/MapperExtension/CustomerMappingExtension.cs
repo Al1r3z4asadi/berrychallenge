@@ -9,6 +9,7 @@ namespace berry.facade.MapperExtension
         {
             return new CustomerDto
             {
+                Id = customer.Id,
                 Name = customer.Name,
             };
         }
@@ -20,6 +21,7 @@ namespace berry.facade.MapperExtension
         {
             return new Customer
             {
+                Id = customerDto.Id,    
                 Name = customerDto.Name,
             };
         }
