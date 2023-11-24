@@ -21,8 +21,9 @@ namespace berry.facade.MapperExtension
         {
             return new Customer
             {
-                Id = customerDto.Id,    
+                Id = customerDto.Id,
                 Name = customerDto.Name,
+                IsDeleted = false 
             };
         }
     }

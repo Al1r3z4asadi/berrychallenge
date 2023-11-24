@@ -17,6 +17,11 @@ namespace berry.core.DomainService
             await _customerRepository.InsertAsync(customer);
         }
 
+        public async Task DeleteCustomer(string id)
+        {
+            await _customerRepository.DeleteAsync(id);  
+        }
+
         public async Task EditCustomerName(Customer customer)
         {
             await _customerRepository.UpdateAsync(customer.Id, customer);

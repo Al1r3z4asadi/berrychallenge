@@ -20,6 +20,11 @@ namespace berry.facade
             await _customerService.AddCustomer(customer.ToEntity());
         }
 
+        public async Task DeleteCustomerName(string id)
+        {
+            await _customerService.DeleteCustomer(id);
+        }
+
         public async Task EditCustomerName(CustomerDto customer)
         {
             await _customerService.EditCustomerName(customer.ToEntity());

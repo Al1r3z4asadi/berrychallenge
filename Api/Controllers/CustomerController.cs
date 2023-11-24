@@ -43,5 +43,13 @@ namespace Api.Controllers
             return Created(Request.Path, customer.WrapResponse(Request.Path));
         }
 
+        [HttpDelete]
+        public async Task<IActionResult> DeleteCustomer([FromBody] string id)
+        {
+            await _customerFacade.DeleteCustomerName(id);
+            return Created(Request.Path, id.WrapResponse(Request.Path));
+        }
+
+
     }
 }

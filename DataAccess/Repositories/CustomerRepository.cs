@@ -25,7 +25,8 @@ namespace DataAccess.Repositories
             try
             {
                 var filter = Builders<Customer>.Filter.Eq(c => c.Id, id);
-                await _collection.DeleteOneAsync(filter);
+                var update = Builders<Customer>.Update.Set(c => c.IsDeleted, true);
+                await _collection.UpdateOneAsync(filter, update);
             }
             catch (Exception ex)
             {
@@ -38,9 +39,8 @@ namespace DataAccess.Repositories
         {
             try
             {
-                var customers = await _collection.Find(Builders<Customer>.Filter.Empty)
-                    .ToListAsync();
-
+                var filter = Builders<Customer>.Filter.Eq(c => c.IsDeleted, false);
+                var customers = await _collection.Find(filter).ToListAsync();
                 return customers;
             }
             catch (Exception ex)
@@ -55,7 +55,11 @@ namespace DataAccess.Repositories
         {
             try
             {
-                var filter = Builders<Customer>.Filter.Eq(c => c.Id, id);
+                var filter = Builders<Customer>.Filter.And(
+                    Builders<Customer>.Filter.Eq(c => c.Id, id),
+                    Builders<Customer>.Filter.Eq(c => c.IsDeleted, false)
+                );
+
                 return await _collection.Find(filter).FirstOrDefaultAsync();
             }
             catch (Exception ex)
@@ -82,7 +86,11 @@ namespace DataAccess.Repositories
         {
             try
             {
-                var filter = Builders<Customer>.Filter.Eq(c => c.Id, id);
+                var filter = Builders<Customer>.Filter.And(
+                    Builders<Customer>.Filter.Eq(c => c.Id, id),
+                    Builders<Customer>.Filter.Eq(c => c.IsDeleted, false)
+                );
+
                 var update = Builders<Customer>.Update
                     .Set(c => c.Name, updatedItem.Name);
 
