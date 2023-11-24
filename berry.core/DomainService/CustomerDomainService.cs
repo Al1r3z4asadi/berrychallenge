@@ -1,4 +1,5 @@
 ﻿using berry.core.DataService;
+using berry.core.DomainObjects.customer;
 using berry.core.DTOs;
 using berry.facade.MapperExtension;
 
@@ -10,6 +11,12 @@ namespace berry.core.DomainService
         public CustomerDomainService(ICustomerRepository customerRepository) { 
             this._customerRepository = customerRepository;  
         }
+
+        public async Task AddCustomer(Customer customer)
+        {
+            await _customerRepository.InsertAsync(customer);
+        }
+
         public async Task<IEnumerable<CustomerDto>> getAllCustomers()
         {
             var customers = await _customerRepository.GetAllAsync();
